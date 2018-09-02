@@ -1,0 +1,261 @@
+@import url("https://fonts.googleapis.com/css?family=Comfortaa:400,700");
+@import url("https://fonts.googleapis.com/css?family=Oswald");
+@font-face {
+  font-family: "Comfortaa", cursive;
+  src: url("https://fonts.googleapis.com/css?family=Comfortaa:400,700");
+}
+@font-face {
+  font-family: "Oswald", sans-serif;
+  src: url("https://fonts.googleapis.com/css?family=Oswald");
+}
+
+@media only screen and (max-width: 320px) {
+  #imgSlider > img {
+    height: 100%;
+    width: 100%;
+  }
+  #arrowPrvi,
+  #arrowDrugi {
+    display: none;
+  }
+  #picmenu {
+    position: absolute;
+    height: 20px;
+    width: 50%;
+    top: 20vw;
+    left: 40vw;
+    z-index: 1;
+    background-color: initial;
+  }
+  #navBar {
+    position: fixed;
+    height: 10%;
+    z-index: 3;
+    background-color: black;
+  }
+  #navBar > ul {
+    display: none;
+  }
+  #navBar li:hover {
+    background-color: none;
+  }
+  #navBar::before {
+    content: "Menu";
+    color: White;
+    font-size: 20px;
+    position: relative;
+    top: 45%;
+    left: 45%;
+    font-family: Comfortaa;
+  }
+  #g1 > ul > li {
+    right: 15%;
+  }
+  #g2 > p {
+    font-size: 12px;
+    color: white;
+    font-family: Oswald;
+    opacity: 1;
+    font-size: 10px;
+  }
+}
+
+/* brown  #795548 
+   gray   #607d8b 
+   green  #43a047 
+*/
+
+#imgSlider {
+  position: relative;
+  height: 28vw;
+  width: 100vw;
+}
+#imgSlider > img {
+  position: absolute;
+}
+.arrowsBruh {
+  position: absolute;
+  z-index: 1;
+  height: 50px;
+  width: 50px;
+  top: 12vw;
+}
+#arrowPrvi {
+  transform: rotate(180deg);
+}
+#arrowDrugi {
+  left: 96.5%;
+}
+#picmenu {
+  position: absolute;
+  height: 20px;
+  width: 50%;
+  top: 25vw;
+  left: 40vw;
+  z-index: 1;
+  background-color: initial;
+}
+.buttons {
+  border-radius: 20px 20px;
+  background-color: white;
+  height: 10px;
+  width: 10px;
+  display: inline-block;
+  margin-right: 5%;
+  margin-left: 5%;
+  position: relative;
+  opacity: 0.6;
+}
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #212121;
+}
+
+#navBar {
+  position: absolute;
+  z-index: 1;
+  width: 100vw;
+  top: -16px;
+  position: fixed;
+}
+#navBar > ul {
+  text-align: center;
+  background: linear-gradient(to bottom, black, transparent);
+}
+#navBar li:hover {
+  background-color: black;
+  border-radius: 20px 20px;
+  transition: background 1s ease 0s;
+}
+#navBar li {
+  display: inline-block;
+  margin-right: 20px;
+  margin-left: 20px;
+  padding: 20px 20px;
+  color: whitesmoke;
+  font-family: Comfortaa;
+}
+#Portofolio,
+div[id="About Me"],
+#Contact {
+  position: relative;
+  background-color: white;
+  height: 100vh;
+  width: 100vw;
+}
+#Header {
+  position: relative;
+}
+.progressBar {
+  height: 5vh;
+  width: 25vw;
+  border-radius: 100px;
+  background-color: #43a884;
+  border: 3px solid black;
+  box-shadow: 1px 3px 10px white;
+  margin-top: 5vh;
+  display: inline-block;
+}
+.progressBar > div {
+  height: inherit;
+  background: linear-gradient(to right, black, seagreen);
+  width: 0px;
+  border-radius: inherit;
+}
+#Portofolio {
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+}
+#loremipsum,
+#skills {
+  width: 50%;
+}
+#Portofolio p,
+#Contact p {
+  font-size: 20px;
+  font-family: Oswald;
+  text-indent: 1%;
+}
+#Portofolio h3 {
+  font-size: 40px;
+  font-family: Oswald;
+  color: seagreen;
+}
+div[id="About Me"] > div {
+  background-color: darkgrey;
+  border: 3px solid black;
+}
+div[id="About Me"] {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-template-rows: repeat(2, 1fr);
+}
+#g1 {
+  grid-column: 1 / span 1;
+  grid-row: 1 / span 2;
+}
+#g2 {
+  grid-column: 2 / span1;
+  grid-row: 1 / span 2;
+}
+div[id="About Me"] > div > ul {
+  list-style-type: none;
+  font-family: Oswald;
+  color: White;
+}
+div[id="About Me"] > div li {
+  position: relative;
+  text-align: center;
+  font-size: 30px;
+  padding-bottom: 20px;
+}
+div[id="About Me"] > div li:hover {
+  color: black;
+  cursor: pointer;
+}
+#g2 > p {
+  color: WHite;
+  font-family: Oswald;
+  font-size: 15px;
+  opacity: 0;
+}
+
+#Contact > form {
+  width: 100%;
+  position: relative;
+}
+#Contact {
+  text-align: center;
+  background-color: #212121;
+}
+#Contact fieldset {
+  display: flex;
+  flex-direction: column;
+}
+input,
+textarea {
+  align-self: center;
+  color: #212121;
+}
+label,
+legend {
+  color: White;
+}
+#Contact * {
+  border-radius: 20px;
+  font-family: Oswald;
+}
+#Footer {
+  font-family: Oswald;
+  color: White;
+  font-size: 20px;
+  text-align: center;
+  background-color: aqua;
+  height: 10vh;
+}
+#Footer > p {
+  position: relative;
+  top: 30%;
+}
