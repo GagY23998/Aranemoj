@@ -26,8 +26,7 @@ $(function() {
         situation.css("display", "none");
       }
     });
-    $("#g2>p").css("opacity", 1);
-    $("#navBar li").click(e => {
+    $("#navBar li a").click(e => {
       setTimeout(() => $("#navBar>ul").css("display", "none"), 100);
       /*      let goal = $("div[id='" + e.target.textContent + "']").offset();
       window.scrollTo({
@@ -91,11 +90,13 @@ $(function() {
   });
 
   var imgSlider = $("#imgSlider>img");
+  console.log(imgSlider);
+
   imgSlider.each(function() {
     $(this).css({ opacity: "0" });
   });
   let skillz = [0.55, 0.7, 0.2, 0.6, 0.3];
-  $("#navBar>ul>li").click(e => {
+  $("#navBar>ul>li>a").click(e => {
     let goal = $("div[id='" + e.target.textContent + "']").offset();
     window.scrollTo({
       top: goal["top"],
@@ -107,7 +108,7 @@ $(function() {
   $("#imgSlider")
     .children()
     .first()
-    .css({ opacity: "100" });
+    .css({ opacity: "1" });
   for (let i = 0; i < imgSlider.length; i++) {
     $("#picmenu").append("<div class='buttons'></div>");
   }
