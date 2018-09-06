@@ -10,6 +10,9 @@
 }
 
 @media only screen and (max-width: 320px) {
+  #Home > #Header {
+    height: 200px;
+  }
   #imgSlider > img {
     height: 100%;
     width: 100%;
@@ -18,14 +21,14 @@
   #arrowDrugi {
     display: none;
   }
-  #picmenu {
-    position: absolute;
-    height: 20px;
-    width: 50%;
-    top: 20vw;
-    left: 40vw;
-    z-index: 1;
-    background-color: initial;
+  #Portofolio {
+    overflow: scroll;
+    -webkit-overflow-scrolling: touch;
+    overflow-y: scroll;
+  }
+  div[id="About Me"] > #g2 > p {
+    display: none;
+    opacity: 1;
   }
   #navBar {
     position: fixed;
@@ -57,6 +60,21 @@
     font-family: Oswald;
     opacity: 1;
     font-size: 10px;
+    overflow: scroll;
+  }
+  #Contact {
+    width: 320px;
+    display: block;
+  }
+  #Contact form {
+    width: 70%;
+  }
+  #Contact input,
+  #Contact textarea {
+    width: 100%;
+  }
+  #Cdetails {
+    display: none;
   }
 }
 
@@ -67,11 +85,12 @@
 
 #imgSlider {
   position: relative;
-  height: 28vw;
+  height: inherit;
   width: 100vw;
 }
 #imgSlider > img {
   position: absolute;
+  height: inherit;
 }
 .arrowsBruh {
   position: absolute;
@@ -82,18 +101,18 @@
 }
 #arrowPrvi {
   transform: rotate(180deg);
+  left: 1%;
 }
 #arrowDrugi {
-  left: 96.5%;
+  left: 95.5%;
 }
 #picmenu {
+  width: 100%;
   position: absolute;
-  height: 20px;
-  width: 50%;
-  top: 25vw;
-  left: 40vw;
+  top: 90%;
   z-index: 1;
   background-color: initial;
+  text-align: center;
 }
 .buttons {
   border-radius: 20px 20px;
@@ -101,8 +120,8 @@
   height: 10px;
   width: 10px;
   display: inline-block;
-  margin-right: 5%;
-  margin-left: 5%;
+  margin-right: 10px;
+  margin-left: 10px;
   position: relative;
   opacity: 0.6;
 }
@@ -123,10 +142,15 @@ body {
   text-align: center;
   background: linear-gradient(to bottom, black, transparent);
 }
+#navBar > ul > li > a {
+  color: White;
+  text-decoration: none;
+}
 #navBar li:hover {
   background-color: black;
   border-radius: 20px 20px;
   transition: background 1s ease 0s;
+  cursor: pointer;
 }
 #navBar li {
   display: inline-block;
@@ -141,20 +165,21 @@ div[id="About Me"],
 #Contact {
   position: relative;
   background-color: white;
-  height: 100vh;
-  width: 100vw;
+  padding: 0;
+  margin: 0;
 }
 #Header {
   position: relative;
+  height: 500px;
 }
 .progressBar {
-  height: 5vh;
-  width: 25vw;
+  height: 20px;
+  width: 45%;
   border-radius: 100px;
   background-color: #43a884;
   border: 3px solid black;
   box-shadow: 1px 3px 10px white;
-  margin-top: 5vh;
+  margin-top: 20px;
   display: inline-block;
 }
 .progressBar > div {
@@ -221,38 +246,86 @@ div[id="About Me"] > div li:hover {
   font-size: 15px;
   opacity: 0;
 }
-
-#Contact > form {
-  width: 100%;
+#Contact * {
   position: relative;
 }
 #Contact {
+  background-color: #2f3238;
   text-align: center;
-  background-color: #212121;
+  height: 600px;
+  width: 100%;
+  position: relative;
+  display: inline-block;
 }
-#Contact fieldset {
-  display: flex;
-  flex-direction: column;
+#Contact > h3 {
+  top: 30px;
+  color: White;
+  font-family: Comfortaa;
 }
-input,
-textarea {
-  align-self: center;
-  color: #212121;
+#Contact > h1 {
+  text-transform: uppercase;
+  font-family: Comfortaa;
+  color: White;
+  top: 20px;
 }
-label,
-legend {
+#Cdetails > h3 {
+  text-transform: uppercase;
   color: White;
 }
-#Contact * {
-  border-radius: 20px;
-  font-family: Oswald;
+address {
+  color: white;
 }
+#Cdetails > p {
+  color: #de5e60;
+}
+#Contact form {
+  float: left;
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  /* position: relative;*/
+  top: 50px;
+  left: 65px;
+}
+form input {
+  width: 70%;
+}
+form input[type="submit"] {
+  width: 20%;
+  height: 40px;
+}
+form input {
+  height: 30px;
+  background-color: #26292e;
+  color: white;
+  font-family: Oswald;
+  border: 1px solid transparent;
+  padding-left: 5px;
+  margin-bottom: 1px;
+}
+textarea {
+  background-color: #26292e;
+  color: white;
+  font-family: oswald;
+  padding-left: 5px;
+  border-color: transparent;
+  width: 69.8%;
+}
+
+#Cdetails {
+  float: right;
+  width: 30%;
+  position: relative;
+  right: 180px;
+  top: 50px;
+}
+
 #Footer {
   font-family: Oswald;
   color: White;
   font-size: 20px;
   text-align: center;
-  background-color: aqua;
+  background-color: rgb(13, 58, 23);
   height: 10vh;
 }
 #Footer > p {
